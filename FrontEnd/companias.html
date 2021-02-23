@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./assets/styles/css/app.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<div class="container">
+					<a class="navbar-brand" href="/">
+						<img
+							src="./assets/img/logo.png"
+							class="d-inline-block align-top"
+							alt="logo data warehouse"
+							loading="lazy"
+						/>
+						<p>Data Warehouse</p>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarNavDropdown"
+						aria-controls="navbarNavDropdown"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="./contactos.html">Contactos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="./companias.html">Compañías<span class="sr-only"></span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./usuarios.html" id="user-nav-button">Usuarios </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./region.html">Region/Ciudad</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<section class="company">
+				<h1>Compañias</h1>
+				<div class="company-buttons">
+					<a href="" data-toggle="modal" data-target="#modal-newCompany"
+						><div><img src="./assets/img/add.svg" alt="icono agregar" /></div>
+						Agregar Compañia
+					</a>
+				</div>
+				<div class="company-list" id="company-list">
+					<div class="company-list-item row">
+						<div class="col-md-4 mb-2 mb-md-0">
+							<p>Nombre</p>
+							<p>prueba de prueba</p>
+						</div>
+						<div class="col-md-3 mb-2 mb-md-0">
+							<p>Pais</p>
+							<p>prueba@gmail.com</p>
+						</div>
+						<div class="col-md-2 mb-2 mb-md-0">
+							<p>Direccion</p>
+							<p>cl prueba</p>
+						</div>
+						<div class="col-md-3 company-list-item-buttons">
+							<button class="btn btn-danger">Eliminar</button>
+							<button class="btn btn-primary">Editar</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div
+			class="modal fade"
+			id="modal-newCompany"
+			tabindex="-1"
+			aria-labelledby="modal-newCompanyLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<h5 class="modal-title text-white" id="modal-newCompanyLabel">Nuevo usuario</h5>
+					</div>
+					<div class="modal-body">
+						<form id="modal-newCompany-form">
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="nameInput">Nombre</label>
+									<input type="text" class="form-control" name="name" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="addressInput">Direccion</label>
+									<input type="text" class="form-control" name="address" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="emailInput">Email</label>
+									<input type="text" class="form-control" name="email" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="phoneInput">Telefono</label>
+									<input type="text" class="form-control" name="phone" />
+								</div>
+								<div class="form-group col-md-12">
+									<label for="cityInput">Ciudad</label>
+									<select id="city-Input-create-company" class="form-control" name="cityId"></select>
+								</div>
+							</div>
+							<div class="form-row footer-form pb-0 mt-4">
+								<div class="col-12">
+									<button type="submit" class="btn btn-dark">Agregar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="modal-editCompany"
+			tabindex="-1"
+			aria-labelledby="modal-editCompanyLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<h5 class="modal-title text-white" id="modal-editCompanyLabel">Nuevo usuario</h5>
+					</div>
+					<div class="modal-body">
+						<form id="modal-editCompany-form">
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="nameInput">Nombre</label>
+									<input type="text" class="form-control" name="name" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="addressInput">Direccion</label>
+									<input type="text" class="form-control" name="address" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="emailInput">Email</label>
+									<input type="text" class="form-control" name="email" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="phoneInput">Telefono</label>
+									<input type="text" class="form-control" name="phone" />
+								</div>
+								<div class="form-group col-md-12">
+									<label for="cityInput">Ciudad</label>
+									<select id="city-input-edit-company" class="form-control" name="cityId"></select>
+								</div>
+							</div>
+							<div class="form-row footer-form pb-0 mt-4">
+								<div class="col-12">
+									<button type="submit" class="btn btn-dark">Editar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="modal-deleteCompany"
+			tabindex="-1"
+			aria-labelledby="modal-deleteCompanyLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<h5 class="modal-title text-white" id="modal-deleteCompanyLabel">Esta Seguro de eliminar esta ciudad.</h5>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" id="btn-delete-company">Si</button>
+						<button class="btn btn-primary" data-dismiss="modal">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+			crossorigin="anonymous"
+		></script>
+		<script src="./assets/js/jwt.js"></script>
+		<script src="./assets/js/company/loadCompanies.js"></script>
+		<script src="./assets/js/company/createCompany.js"></script>
+		<script src="./assets/js/company/deleteCompany.js"></script>
+		<script src="./assets/js/company/editCompany.js"></script>
+	</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./assets/styles/css/app.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<div class="container">
+					<a class="navbar-brand" href="/">
+						<img
+							src="./assets/img/logo.png"
+							class="d-inline-block align-top"
+							alt="logo data warehouse"
+							loading="lazy"
+						/>
+						<p>Data Warehouse</p>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarNavDropdown"
+						aria-controls="navbarNavDropdown"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link" href="./contactos.html">Contactos<span class="sr-only"></span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./companias.html">Compañías</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./usuarios.html" id="user-nav-button">Usuarios</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./region.html">Region/Ciudad</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<section class="contacts">
+				<h1>Contactos</h1>
+				<div class="contacts-buttons">
+					<div class="d-flex">
+						<a class="contacts-buttons-search mr-2" href="" id="selectAll-contacts"> Seleccionar todo </a>
+						<a href="" class="btn btn-danger ml-2" id="delete-all-selected">Eliminar Todos</a>
+					</div>
+					<a href="" data-toggle="modal" data-target="#modal-newContact"
+						><div>
+							<img src="./assets/img/add.svg" alt="icono agregar" />
+						</div>
+						Agregar contacto
+					</a>
+				</div>
+				<div class="contacts-list">
+					<div class="accordion" id="accordionContact"></div>
+				</div>
+			</section>
+		</div>
+		<div
+			class="modal fade"
+			id="modal-newContact"
+			tabindex="-1"
+			aria-labelledby="modal-newContactLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<h5 class="modal-title text-white" id="modal-newContactLabel">Nuevo contacto</h5>
+					</div>
+					<div class="modal-body">
+						<form id="modal-newContact-form">
+							<div class="form-row">
+								<p>Datos Personales</p>
+								<div class="form-group col-md-6">
+									<label for="nameInput">Nombre</label>
+									<input type="text" class="form-control" name="name" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="lastnameInput">Apellido</label>
+									<input type="text" class="form-control" name="last_name" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="chargeInput">Cargo</label>
+									<input type="text" class="form-control" name="occupation" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="emailInput">Email</label>
+									<input type="text" class="form-control" name="email" />
+								</div>
+
+								<div class="form-group col-md-12">
+									<label for="companyInput">Compañia</label>
+									<select id="create-contact-company-select" class="form-control" name="companyId"></select>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<p>Datos de contacto</p>
+								<div class="form-group col-md-6">
+									<label for="regionInput">Región</label>
+									<select id="create-contact-region-select" class="form-control" name="regionId">
+										<option selected>Elija una region...</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="countryInput">País</label>
+									<select id="create-contact-country-select" class="form-control" name="countryId">
+										<option selected>Elija una region...</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="cityInput">Ciudad</label>
+									<select id="create-contact-city-select" class="form-control" name="cityId">
+										<option selected>Elija un pais...</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="AddressInput">Dirección</label>
+									<input type="text" class="form-control" name="address" />
+								</div>
+								<div class="form-group col-md-12">
+									<label for="emailInput">Telefono</label>
+									<input type="text" class="form-control" name="phone" />
+								</div>
+							</div>
+							<div class="form-row footer-form pb-0 mt-4">
+								<div class="col-12">
+									<button type="submit" class="btn btn-dark">Guardar contacto</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="modal-editContact"
+			tabindex="-1"
+			aria-labelledby="modal-editContactLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<h5 class="modal-title text-white" id="modal-editContactLabel">Nuevo contacto</h5>
+					</div>
+					<div class="modal-body">
+						<form id="modal-editContact-form">
+							<div class="form-row">
+								<p>Datos Personales</p>
+								<div class="form-group col-md-6">
+									<label for="nameInput">Nombre</label>
+									<input type="text" class="form-control" name="name" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="lastnameInput">Apellido</label>
+									<input type="text" class="form-control" name="last_name" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="chargeInput">Cargo</label>
+									<input type="text" class="form-control" name="occupation" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="emailInput">Email</label>
+									<input type="text" class="form-control" name="email" />
+								</div>
+
+								<div class="form-group col-md-12">
+									<label for="companyInput">Compañia</label>
+									<select id="edit-contact-company-select" class="form-control" name="companyId"></select>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<p>Datos de contacto</p>
+								<div class="form-group col-md-6">
+									<label for="regionInput">Región</label>
+									<select id="edit-contact-region-select" class="form-control" name="regionId">
+										<option selected>Elija una region...</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="countryInput">País</label>
+									<select id="edit-contact-country-select" class="form-control" name="countryId">
+										<option selected>Elija una region...</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="cityInput">Ciudad</label>
+									<select id="edit-contact-city-select" class="form-control" name="cityId">
+										<option selected>Elija un pais...</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="AddressInput">Dirección</label>
+									<input type="text" class="form-control" name="address" />
+								</div>
+								<div class="form-group col-md-12">
+									<label for="emailInput">Telefono</label>
+									<input type="text" class="form-control" name="phone" />
+								</div>
+							</div>
+							<div class="form-row footer-form pb-0 mt-4">
+								<div class="col-12">
+									<button type="submit" class="btn btn-dark">Guardar contacto</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="modal-deleteContact"
+			tabindex="-1"
+			aria-labelledby="modal-deleteContactLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<h5 class="modal-title text-white" id="modal-deleteContactLabel">Esta Seguro de eliminar esta ciudad.</h5>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" id="btn-delete-contact">Si</button>
+						<button class="btn btn-primary" data-dismiss="modal">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+			crossorigin="anonymous"
+		></script>
+		<script src="./assets/js/jwt.js"></script>
+		<script src="./assets/js/contacts/loadContacts.js"></script>
+		<script src="./assets/js/contacts/createContact.js"></script>
+		<script src="./assets/js/contacts/deleteContacts.js"></script>
+		<script src="./assets/js/contacts/editContact.js"></script>
+		<script src="./assets/js/contacts/selectAll.js"></script>
+		<script src="./assets/js/contacts/deleteMany.js"></script>
+	</body>
+</html>

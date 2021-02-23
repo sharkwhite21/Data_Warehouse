@@ -1,0 +1,1361 @@
+ html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  main {
+    display: block;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  hr {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+  }
+  pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+  }
+  a {
+    background-color: transparent;
+  }
+  
+  abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+    /* 2 */
+  }
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+  }
+  
+  /**
+     * Add the correct font size in all browsers.
+     */
+  small {
+    font-size: 80%;
+  }
+  
+  /**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  /* Embedded content
+       ========================================================================== */
+  /**
+     * Remove the border on images inside links in IE 10.
+     */
+  img {
+    border-style: none;
+  }
+  
+  /* Forms
+       ========================================================================== */
+  /**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+  }
+  
+  /**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+  button,
+  input {
+    /* 1 */
+    overflow: visible;
+  }
+  
+  /**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+  button,
+  select {
+    /* 1 */
+    text-transform: none;
+  }
+  
+  /**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    -webkit-appearance: button;
+  }
+  
+  /**
+     * Remove the inner border and padding in Firefox.
+     */
+  button::-moz-focus-inner,
+  [type='button']::-moz-focus-inner,
+  [type='reset']::-moz-focus-inner,
+  [type='submit']::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /**
+     * Restore the focus styles unset by the previous rule.
+     */
+  button:-moz-focusring,
+  [type='button']:-moz-focusring,
+  [type='reset']:-moz-focusring,
+  [type='submit']:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /**
+     * Correct the padding in Firefox.
+     */
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  /**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+  legend {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+  }
+  
+  /**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+  progress {
+    vertical-align: baseline;
+  }
+  
+  /**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+  textarea {
+    overflow: auto;
+  }
+  
+  /**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+  [type='checkbox'],
+  [type='radio'] {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+  }
+  
+  /**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+  [type='number']::-webkit-inner-spin-button,
+  [type='number']::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  /**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+  [type='search'] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+  }
+  
+  /**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+  [type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+  }
+  
+  /* Interactive
+       ========================================================================== */
+  /*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+  details {
+    display: block;
+  }
+  
+  /*
+     * Add the correct display in all browsers.
+     */
+  summary {
+    display: list-item;
+  }
+  
+  /* Misc
+       ========================================================================== */
+  /**
+     * Add the correct display in IE 10+.
+     */
+  template {
+    display: none;
+  }
+  
+  /**
+     * Add the correct display in IE 10.
+     */
+  [hidden] {
+    display: none;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+  
+  .bg-primary {
+    background-color: black !important;
+  }
+  
+  .btn-primary {
+    background-color: black !important;
+    border: none;
+  }
+  
+  .btn-dark {
+    background-color: #000 !important;
+  }
+  
+  .btn-danger {
+    background-color: #f00 !important;
+  }
+  
+  .form-control:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  
+  .navbar {
+    /* background-image: -webkit-gradient(linear, left top, right top, from(#2575fc), to(#6a11cb)); */
+    background: black;
+  }
+  
+  .navbar .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .navbar-collapse {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  
+  .navbar-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .navbar-brand img {
+    width: 40px;
+  }
+  
+  .navbar a {
+    font-weight: bold;
+  }
+  
+  .login-container {
+    width: 100%;
+    height: 100vh;
+    background: -webkit-linear-gradient(left, #6a11cb, #2575fc);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .login-container form {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  
+  .login-container form span {
+    font-size: 30px;
+    line-height: 1.2;
+    color: #fff;
+  }
+  
+  .login-container form .form-group {
+    margin-top: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .login-container form .form-group div:first-child {
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .login-container form .form-group input {
+    border-radius: 0;
+    height: 75px;
+    padding: 15px 30px;
+    border: none;
+  }
+  
+  .login-container form .form-group label {
+    color: #555555;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    pointer-events: none;
+    padding: 0 30px;
+    left: 0px;
+    top: calc(50% - 11px);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .login-container form .form-group label.top {
+    top: 9px;
+    color: #000;
+    font-size: 14px;
+  }
+  
+  .login-container form .form-group .btn {
+    height: 70px;
+    padding: 0 20px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 0;
+    margin-top: -1px;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .login-container form .form-group .btn:hover {
+    background: -webkit-gradient(linear, left top, right top, from(#2575fc), to(#6a11cb));
+    background: linear-gradient(left, #2575fc, #6a11cb);
+  }
+  
+  .contacts {
+    padding-top: 80px;
+  }
+  
+  .contacts > h1 {
+    margin-top: 0;
+  }
+  
+  .contacts-list .accordion .card {
+    margin: 0;
+    margin-bottom: 10px;
+    border-left: 4px solid #6a11cb;
+    border-right: 4px solid #6a11cb;
+    -webkit-box-shadow: -5px 5px 16px -4px #000;
+            box-shadow: -5px 5px 16px -4px #000;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .contacts-list .accordion .card:hover {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  
+  .contacts-list .accordion .card:first-child {
+    margin-top: 0;
+  }
+  
+  .contacts-list .accordion .card-header {
+    margin-bottom: 0;
+  }
+  
+  .contacts-list .accordion .card-header h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .contacts-list .accordion .card-header a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: transparent;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+  }
+  
+  .contacts-list .accordion .card-header a:hover .action-buttons {
+    opacity: 1;
+  }
+  
+  .contacts-list .accordion .card-header a div {
+    width: 25%;
+  }
+  
+  .contacts-list .accordion .card-header a div p {
+    font-weight: bold;
+    color: #2575fc;
+  }
+  
+  .contacts-list .accordion .card-header a div p:last-child {
+    color: #000;
+    font-weight: 400;
+  }
+  
+  .contacts-list .accordion .card-header a div .progress {
+    width: 100%;
+  }
+  
+  .contacts-list .accordion .card-header a img {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contacts-list .accordion .card-header a.collapsed img {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  
+  .contacts-list .accordion .card-header .action-buttons {
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .contacts-list .accordion .card-header .action-buttons .btn:first-child {
+    margin-right: 10px;
+  }
+  
+  .contacts-list .accordion .card-body {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  
+  .contacts-list .accordion .card-body .row div p {
+    line-height: 16px;
+  }
+  
+  .contacts-list .accordion .card-body .row div p:first-child {
+    color: #2575fc;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .contacts-list .accordion .card-body .row div small {
+    font-size: 14px;
+    opacity: 50%;
+  }
+  
+  .contacts-list .accordion .card-body .row div .canals {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  
+  .contacts-list .accordion .card-body .row div .canals p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #6a11cb;
+    padding: 2px 8px;
+    margin-right: 4px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .contacts-buttons {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .contacts-buttons a {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .contacts-buttons a div {
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 5px;
+    background-color: #2575fc;
+    border-radius: 50%;
+  }
+  
+  .contacts-buttons a div img {
+    width: 100%;
+  }
+  
+  .contacts-buttons a:hover {
+    text-decoration: none;
+    color: #6a11cb;
+  }
+  
+  .contacts-buttons .btn {
+    display: none;
+    color: #fff;
+    border-radius: 50px;
+  }
+  
+  .contacts-buttons-search {
+    border: 2px solid #6a11cb;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5px 10px;
+    border-radius: 50px;
+  }
+  
+  .contacts-buttons-search:hover {
+    border: 2px solid #6a11cb;
+  }
+  
+  .contacts-buttons-search .contacts-buttons-search-image {
+    background-color: #fff;
+    width: initial;
+    height: initial;
+    padding: 0;
+    margin-right: 5px;
+  }
+  
+  .contacts-buttons-search .contacts-buttons-search-image img {
+    width: 24px;
+  }
+  
+  .users {
+    padding-top: 80px;
+  }
+  
+  .users > h1 {
+    margin-top: 0;
+  }
+  
+  .users-list-item {
+    margin: 0;
+    margin-bottom: 10px;
+    border-left: 4px solid #6a11cb;
+    border-right: 4px solid #6a11cb;
+    padding: 15px 0;
+    -webkit-box-shadow: -5px 5px 16px -4px #000;
+            box-shadow: -5px 5px 16px -4px #000;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .users-list-item:hover {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  
+  .users-list-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .users-list-item-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .users-list-item div p {
+    font-weight: bold;
+    color: #0683f9;
+  }
+  
+  .users-list-item div p:last-child {
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .users-buttons {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .users-buttons a {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .users-buttons a div {
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 5px;
+    background-color: #0683f9;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .users-buttons a div img {
+    width: 100%;
+  }
+  
+  .users-buttons a:hover {
+    text-decoration: none;
+    color: #0683f9;
+  }
+  
+  .company {
+    padding-top: 80px;
+  }
+  
+  .company > h1 {
+    margin-top: 0;
+  }
+  
+  .company-list-item {
+    margin: 0;
+    margin-bottom: 10px;
+    /* border-left: 2px solid black; */
+    /* border-right: 2px solid black; */
+    padding: 15px 0;
+    /* -webkit-box-shadow: -5px 5px 16px -4px #000;
+            box-shadow: -5px 5px 16px -4px #000; */
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .company-list-item:hover {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  
+  .company-list-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .company-list-item div p {
+    font-weight: bold;
+    color: #0683f9;
+  }
+  
+  .company-list-item div p:last-child {
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .company-list-item-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .company-buttons {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .company-buttons a {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .company-buttons a div {
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 5px;
+    background-color: #0683f9;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .company-buttons a div img {
+    width: 100%;
+  }
+  
+  .company-buttons a:hover {
+    text-decoration: none;
+    color: #0683f9;
+  }
+  
+  .region {
+    padding-top: 80px;
+  }
+  
+  .region > h1 {
+    margin-top: 0;
+  }
+  
+  .region-list .accordion .card {
+    margin: 0;
+    margin-bottom: 10px;
+    border-left: 4px solid #6a11cb;
+    border-right: 4px solid #6a11cb;
+    -webkit-box-shadow: -5px 5px 16px -4px #000;
+            box-shadow: -5px 5px 16px -4px #000;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .region-list .accordion .card:hover {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  
+  .region-list .accordion .card:hover:hover .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .region-list .accordion .card:first-child {
+    margin-top: 0;
+  }
+  
+  .region-list .accordion .card-header {
+    margin-bottom: 0;
+  }
+  
+  .region-list .accordion .card-header h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .region-list .accordion .card-header a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: transparent;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    min-height: 52px;
+  }
+  
+  .region-list .accordion .card-header a .buttons {
+    display: none;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .region-list .accordion .card-header a p {
+    font-weight: bold;
+    color: #0683f9;
+  }
+  
+  .region-list .accordion .card-header a p:last-child {
+    color: #000;
+    font-weight: 400;
+  }
+  
+  .region-list .accordion .card-header a img {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .region-list .accordion .card-header a.collapsed img {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  
+  .region-list .accordion-deep {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px 40px;
+  }
+  
+  .region-list .accordion-deep p {
+    font-weight: bold;
+  }
+  
+  .region-buttons {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .region-buttons a {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .region-buttons a div {
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 5px;
+    background-color: #0683f9;
+    border-radius: 50%;
+  }
+  
+  .region-buttons a div img {
+    width: 100%;
+  }
+  
+  .region-buttons a:hover {
+    text-decoration: none;
+    color: #0683f9;
+  }
+  
+  .region-buttons-search {
+    border: 2px solid #0683f9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5px 10px;
+    border-radius: 50px;
+  }
+  
+  .region-buttons-search:hover {
+    border: 2px solid #6a11cb;
+  }
+  
+  .region-buttons-search .region-buttons-search-image {
+    background-color: #fff;
+    width: initial;
+    height: initial;
+    padding: 0;
+    margin-right: 5px;
+  }
+  
+  .region-buttons-search .region-buttons-search-image img {
+    width: 24px;
+  }
+  
+  #modal-newContact .modal-dialog {
+    max-width: 650px;
+  }
+  
+  #modal-newContact .modal-dialog .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  #modal-newContact .modal-dialog .modal-body {
+    padding: 30px 40px;
+  }
+  
+  #modal-newContact .modal-dialog .footer-form {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+  }
+  
+  #modal-newContact .modal-dialog .footer-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #modal-newContact-form .form-row > p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  #modal-newContact-form .form-group label {
+    font-weight: 600;
+  }
+  
+  #modal-newContact-form .form-group .form-photo {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  #modal-newContact-form .form-group .form-photo-image {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    overflow: hidden;
+  }
+  
+  #modal-newContact-form .form-group .form-photo-image img {
+    width: 100%;
+  }
+  
+  #modal-newContact-form .form-group .form-photo input {
+    display: none;
+  }
+  
+  #modal-newContact-form .form-group .form-photo label {
+    background-color: #007bff;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    margin-bottom: 0;
+    right: 16px;
+    bottom: 10px;
+  }
+  
+  #modal-newContact-form .form-group .form-photo label img {
+    width: 16px;
+  }
+  
+  #modal-filter .modal-dialog {
+    max-width: 650px;
+  }
+  
+  #modal-filter .modal-dialog .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  #modal-filter .modal-dialog .modal-body {
+    padding: 30px 40px;
+  }
+  
+  #modal-filter .modal-dialog .footer-form {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+  }
+  
+  #modal-filter .modal-dialog .footer-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #modal-filter-form .form-group label {
+    font-weight: 600;
+  }
+  
+  #modal-filter-form .form-group .form-photo {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  #modal-filter-form .form-group .form-photo-image {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    overflow: hidden;
+  }
+  
+  #modal-filter-form .form-group .form-photo-image img {
+    width: 100%;
+  }
+  
+  #modal-filter-form .form-group .form-photo input {
+    display: none;
+  }
+  
+  #modal-filter-form .form-group .form-photo label {
+    background-color: #007bff;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    margin-bottom: 0;
+    right: 16px;
+    bottom: 10px;
+  }
+  
+  #modal-newUser {
+    text-align: center;
+  }
+  
+  #modal-newUser .footer-form {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+  }
+  
+  #modal-newUser .footer-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #modal-newUser label {
+    font-weight: 600;
+  }
+  
+  #modal-newRegion .modal-dialog {
+    max-width: 650px;
+  }
+  
+  #modal-newRegion .modal-dialog .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  #modal-newRegion .modal-dialog .modal-body {
+    padding: 30px 40px;
+  }
+  
+  #modal-newRegion .modal-dialog .footer-form {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+  }
+  
+  #modal-newRegion .modal-dialog .footer-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #modal-newRegion-form {
+    text-align: center;
+  }
+  
+  #modal-newRegion-form .form-row > p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  #modal-newRegion-form .form-group label {
+    font-weight: 600;
+  }
+  
+  #modal-newRegion-form .form-group .form-photo {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  #modal-newRegion-form .form-group .form-photo-image {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    overflow: hidden;
+  }
+  
+  #modal-newRegion-form .form-group .form-photo-image img {
+    width: 100%;
+  }
+  
+  #modal-newRegion-form .form-group .form-photo input {
+    display: none;
+  }
+  
+  #modal-newRegion-form .form-group .form-photo label {
+    background-color: #007bff;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    margin-bottom: 0;
+    right: 16px;
+    bottom: 10px;
+  }
+  
+  #modal-newRegion-form .form-group .form-photo label img {
+    width: 16px;
+  }
+  
+  #modal-newCompany .footer-form {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+  }
+  
+  #modal-newCompany .footer-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #modal-newCompany label {
+    font-weight: 600;
+  }
+  
+  #modal-editContact .modal-dialog {
+    max-width: 650px;
+  }
+  
+  #modal-editContact .modal-dialog .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  #modal-editContact .modal-dialog .modal-body {
+    padding: 30px 40px;
+  }
+  
+  #modal-editContact .modal-dialog .footer-form {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+  }
+  
+  #modal-editContact .modal-dialog .footer-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #modal-editContact-form .form-row > p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  #modal-editContact-form .form-group label {
+    font-weight: 600;
+  }
+  
+  #modal-editContact-form .form-group .form-photo {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  #modal-editContact-form .form-group .form-photo-image {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    overflow: hidden;
+  }
+  
+  #modal-editContact-form .form-group .form-photo-image img {
+    width: 100%;
+  }
+  
+  #modal-editContact-form .form-group .form-photo input {
+    display: none;
+  }
+  
+  #modal-editContact-form .form-group .form-photo label {
+    background-color: #007bff;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    margin-bottom: 0;
+    right: 16px;
+    bottom: 10px;
+  }
+  
+  #modal-editContact-form .form-group .form-photo label img {
+    width: 16px;
+  }
+  /*# sourceMappingURL=app.css.map */
